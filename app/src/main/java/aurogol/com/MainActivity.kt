@@ -8,17 +8,20 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import aurogol.com.PreferenceHelper.get
 import aurogol.com.PreferenceHelper.set
+import com.google.android.material.snackbar.Snackbar
+
 
 class MainActivity : AppCompatActivity() {
+
+    private val snackBar by lazy {
+        Snackbar.make(mainLayout, R.string.press_back_again, Snackbar.LENGTH_SHORT)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /*
-        val preferences = getSharedPreferences("general", Context.MODE_PRIVATE)
-        val session = preferences.getBoolean("session",false)
-        */
+
         val preferences = PreferenceHelper.defaultPrefs(this)
         if (preferences["session",false])
             goToMenuActivity()
@@ -37,12 +40,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun createSessionPreference(){
-        /*
-        val preferences = getSharedPreferences("general", Context.MODE_PRIVATE)
-        val editor = preferences.edit()
-        editor.putBoolean("session",true)
-        editor.apply()
-         */
         val preferences = PreferenceHelper.defaultPrefs(this)
         preferences["session"] = true
     }
@@ -51,5 +48,11 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, MenuActivity::class.java)
         startActivity(intent)
         finish()
+    }
+    override fun onBackPressed() {
+        if(snackBar.isShown)
+            super.onBackPressed()
+        else
+            snackBar.show()
     }
 }
