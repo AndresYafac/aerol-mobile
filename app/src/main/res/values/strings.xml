@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Aerogol</string>
+    <string name="label_login">Inicio de sesión</string>
+    <string name="label_register">Registro</string>
+    <string name="label_email">Correo</string>
+    <string name="label_name">Nombres Completos</string>
+    <string name="label_password">Clave</string>
+    <string name="button_login">Ingresar</string>
+    <string name="button_register">Confirmar Registro</string>
+    <string name="label_go_to_register">Aún no te has registado?</string>
+    <string name="label_go_to_login">Ya tienes una tu cuenta?</string>
+    <string name="please_fill_your_register_data">Por favor completa tus datos</string>
+    <string name="button_appointment">Registrar reserva</string>
+    <string name="button_my_appointments">Mis reservas</string>
+    <string name="button_log_out">cerrar sesión</string>
+    <string name="label_welcome">Bienvenido</string>
+    <string name="label_create_appointment">Registrar reserva</string>
+    <string name="label_description">Descripción</string>
+    <string name="label_deporte">Deporte</string>
+    <string name="label_type">Métodos de pago</string>
+    <string name="type1">Efectivo</string>
+    <string name="type2">Yape</string>
+    <string name="type3">Plin</string>
+    <string name="type4">Tarjeta</string>
+    <string name="button_netx">siguiente</string>
+    <string name="label_cancha">Cancha</string>
+    <string name="label_schedule_date">Fecha para la reserva</string>
+    <string name="button_confirm">Confirmar</string>
+
+    <string name="date_format">%1$d-%2$s-%3$s</string>
+    <string name="item_appointment_id">Reserva %1$d</string>
+    <string name="item_appointment_date">Atención para el día %1$s</string>
+    <string name="item_appointment_time">A las %1$s</string>
+    <string name="my_appointments">Mis reservas</string>
+</resources>
